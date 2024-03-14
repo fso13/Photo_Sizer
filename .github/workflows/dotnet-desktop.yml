@@ -42,7 +42,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          ./Photo_Sizer/bin/Release/Photo_Sizer.exe  # Replace with the actual path to your executable
+          ./bin/Release/Photo_Sizer.exe  # Replace with the actual path to your executable
         token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: v${{ env.newVersion }}
         release_name: v${{ env.newVersion }}
@@ -55,6 +55,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./Photo_Sizer/bin/Release/Photo_Sizer.exe  # Replace with the actual path to your executable
+        asset_path: ./bin/Release/Photo_Sizer.exe  # Replace with the actual path to your executable
         asset_name: Photo_Sizer.exe  # Replace with the desired name for the uploaded asset
         asset_content_type: application/octet-stream
