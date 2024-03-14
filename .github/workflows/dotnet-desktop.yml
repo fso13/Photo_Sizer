@@ -19,7 +19,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.5
      
     - name: Restore NuGet Packages
-      run: nuget restore Racing.sln
+      run: nuget restore Photo_Sizer.sln
     - name: Patch version number 
       shell: powershell
       run: |
